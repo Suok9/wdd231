@@ -42,7 +42,7 @@ nav ul li a {
 }
 
 nav ul li a:hover, .active {
-    color: yellow;
+    color: #EAB308;
 }
 
 #menu-btn {
@@ -59,9 +59,18 @@ nav ul li a:hover, .active {
         display: block;
     }
     #nav-menu {
-        display: none;
-        flex-direction: column;
-    }
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50px;
+}
+
+#nav-menu.show {
+    display: flex;
+ }
 }
 
 footer {
@@ -80,8 +89,8 @@ footer {
 }
 
 .course-card.completed {
-    background-color: #d4edda; /* Light green for completed courses */
-    border-left: 5px solid #28a745;
+    background-color: #A3D9A5; /
+    border-left: 5px solid #1E7D3A; 
 }
 
 .filter-buttons {

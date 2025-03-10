@@ -1,3 +1,4 @@
 document.getElementById("menu-btn").addEventListener("click", function() {
-    document.getElementById("nav-menu").classList.toggle("show");
+    let menu = document.getElementById("nav-menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
 });
