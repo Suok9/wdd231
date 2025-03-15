@@ -1,58 +1,58 @@
 [
-  {
-    "name": "Ephraim Coffee",
-    "address": "123 Market Street, Chicago",
-    "phone": "123-456-7890",
-    "website": "https://Ephraimcoffee.com",
-    "image": "images/coffee.jpeg",
-    "membership": 4
-  },
-  {
-    "name": "Ephraim Bakery",
-    "address": "456 Main Road, Chicago",
-    "phone": "123-789-4560",
-    "website": "https://Ephraimbakery.com",
-    "image": "images/bakery.jpeg",
-    "membership": 3
-  },
-  {
-    "name": "Ephraim Weldings",
-    "address": "16 Alice Road, Chicago",
-    "phone": "123-759-4590",
-    "website": "https://Ephraimweldings.com",
-    "image": "images/welding.jpeg",
-    "membership": 7
-  },
-  {
-    "name": "Ephraim Auto Repairs",
-    "address": "78 Lincoln Avenue, Chicago",
-    "phone": "123-999-0001",
-    "website": "https://Ephraimautorepairs.com",
-    "image": "images/auto.jpeg",
-    "membership": 5
-  },
-  {
-    "name": "Ephraim Clothing",
-    "address": "902 Fashion Street, Chicago",
-    "phone": "123-654-3210",
-    "website": "https://Ephraimclothing.com",
-    "image": "images/clothing.jpeg",
-    "membership": 6
-  },
-  {
-    "name": "Ephraim Electronics",
-    "address": "201 Tech Park, Chicago",
-    "phone": "123-852-9630",
-    "website": "https://Ephraimelectronics.com",
-    "image": "images/electronics.jpeg",
-    "membership": 2
-  },
-  {
-    "name": "Ephraim Gym",
-    "address": "55 Fitness Lane, Chicago",
-    "phone": "123-741-8520",
-    "website": "https://Ephraimgym.com",
-    "image": "images/gym.jpeg",
-    "membership": 8
-  }
-]
+    {
+      "name": "Dangote Group",
+      "address": "1 Alfred Rewane Road, Ikoyi, Lagos, Nigeria",
+      "phone": "+234-1-448-0815",
+      "website": "https://www.dangote.com",
+      "image": "images/dangote.jpg",
+      "membership_level": 3
+    },
+    {
+      "name": "Zenith Bank",
+      "address": "Ajose Adeogun Street, Victoria Island, Lagos",
+      "phone": "+234-1-278-7000",
+      "website": "https://www.zenithbank.com",
+      "image": "images/zenithbank.jpg",
+      "membership_level": 2
+    },
+    {
+      "name": "Shoprite Nigeria",
+      "address": "Ikeja City Mall, Alausa, Ikeja, Lagos, Nigeria",
+      "phone": "+234-1-277-4800",
+      "website": "https://www.shoprite.com.ng",
+      "image": "images/shoprite.jpg",
+      "membership_level": 3
+    },
+    {
+      "name": "MTN Nigeria",
+      "address": "MTN Plaza, Falomo, Ikoyi, Lagos, Nigeria",
+      "phone": "+234-803-123-4567",
+      "website": "https://www.mtn.ng",
+      "image": "images/mtn.jpg",
+      "membership_level": 2
+    },
+    {
+      "name": "Eko Hotels & Suites",
+      "address": "Adetokunbo Ademola Street, Victoria Island",
+      "phone": "+234-1-277-2700",
+      "website": "https://www.ekohotels.com",
+      "image": "images/ekohotels.jpg",
+      "membership_level": 1
+    },
+    {
+      "name": "Jumia Nigeria",
+      "address": "Commercial Avenue, Sabo, Yaba, Lagos, Nigeria",
+      "phone": "+234-700-6000-000",
+      "website": "https://www.jumia.com.ng",
+      "image": "images/jumia.jpg",
+      "membership_level": 2
+    },
+    {
+      "name": "Air Peace",
+      "address": "Sobo Arobiodu Street, GRA, Ikeja, Lagos, Nigeria",
+      "phone": "+234-700-359-247-732",
+      "website": "https://www.flyairpeace.com",
+      "image": "images/airpeace.jpg",
+      "membership_level": 1
+    }
+  ]
