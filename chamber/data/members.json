@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Ephraim Coffee",
+    "address": "123 Market Street, Chicago",
+    "phone": "123-456-7890",
+    "website": "https://Ephraimcoffee.com",
+    "image": "images/coffee.jpeg",
+    "membership": 4
+  },
+  {
+    "name": "Ephraim Bakery",
+    "address": "456 Main Road, Chicago",
+    "phone": "123-789-4560",
+    "website": "https://Ephraimbakery.com",
+    "image": "images/bakery.jpeg",
+    "membership": 3
+  },
+  {
+    "name": "Ephraim Weldings",
+    "address": "16 Alice Road, Chicago",
+    "phone": "123-759-4590",
+    "website": "https://Ephraimweldings.com",
+    "image": "images/welding.jpeg",
+    "membership": 7
+  },
+  {
+    "name": "Ephraim Auto Repairs",
+    "address": "78 Lincoln Avenue, Chicago",
+    "phone": "123-999-0001",
+    "website": "https://Ephraimautorepairs.com",
+    "image": "images/auto.jpeg",
+    "membership": 5
+  },
+  {
+    "name": "Ephraim Clothing",
+    "address": "902 Fashion Street, Chicago",
+    "phone": "123-654-3210",
+    "website": "https://Ephraimclothing.com",
+    "image": "images/clothing.jpeg",
+    "membership": 6
+  },
+  {
+    "name": "Ephraim Electronics",
+    "address": "201 Tech Park, Chicago",
+    "phone": "123-852-9630",
+    "website": "https://Ephraimelectronics.com",
+    "image": "images/electronics.jpeg",
+    "membership": 2
+  },
+  {
+    "name": "Ephraim Gym",
+    "address": "55 Fitness Lane, Chicago",
+    "phone": "123-741-8520",
+    "website": "https://Ephraimgym.com",
+    "image": "images/gym.jpeg",
+    "membership": 8
+  }
+]
