@@ -5,7 +5,7 @@
       "phone": "+234-1-448-0815",
       "website": "https://www.dangote.com",
       "image": "images/dangote.jpg",
-      "membership_level": 3
+      "membership_level": "gold"
     },
     {
       "name": "Zenith Bank",
@@ -13,7 +13,7 @@
       "phone": "+234-1-278-7000",
       "website": "https://www.zenithbank.com",
       "image": "images/zenithbank.jpg",
-      "membership_level": 2
+      "membership_level": "silver"
     },
     {
       "name": "Shoprite Nigeria",
@@ -21,7 +21,7 @@
       "phone": "+234-1-277-4800",
       "website": "https://www.shoprite.com.ng",
       "image": "images/shoprite.jpg",
-      "membership_level": 3
+      "membership_level": "gold"
     },
     {
       "name": "MTN Nigeria",
@@ -29,7 +29,7 @@
       "phone": "+234-803-123-4567",
       "website": "https://www.mtn.ng",
       "image": "images/mtn.jpg",
-      "membership_level": 2
+      "membership_level": "silver"
     },
     {
       "name": "Eko Hotels & Suites",
@@ -37,7 +37,7 @@
       "phone": "+234-1-277-2700",
       "website": "https://www.ekohotels.com",
       "image": "images/ekohotels.jpg",
-      "membership_level": 1
+      "membership_level": "bronze"
     },
     {
       "name": "Jumia Nigeria",
@@ -45,7 +45,7 @@
       "phone": "+234-700-6000-000",
       "website": "https://www.jumia.com.ng",
       "image": "images/jumia.jpg",
-      "membership_level": 2
+      "membership_level": "silver"
     },
     {
       "name": "Air Peace",
@@ -53,6 +53,6 @@
       "phone": "+234-700-359-247-732",
       "website": "https://www.flyairpeace.com",
       "image": "images/airpeace.jpg",
-      "membership_level": 1
+      "membership_level": "bronze"
     }
-  ]
+]
