@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Ephraim Community is a website for everything commerce and community development. Ephraim Business Chamber bridges the gap between community members.">
+  <meta name="author" content="Avwerosuoghene Ejiro Ijabor">
+  <meta property="og:title" content="Ephraim Business Chamber">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://Suok9.github.io/wdd231/chamber/images/hero.webp">
+  <meta property="og:url" content="https://Suok9.github.io/wdd231/chamber/index.html">
+  
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+  
+  <title>Ephraim Chamber of Commerce | Home</title>
+</head>
+
+<body>
+  <header>
+   
+  </header>
+
+  <section>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <main>
+    <section id="hero">
+      <img src="images/hero.webp" alt="ECCOC" width="100%" height="250">
+      <div class="hero-overlay">
+        <h1>Welcome to Ephraim Business Chamber</h1>
+        <p>Connecting Businesses & Strengthening Communities</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather">
+      <h2>Current Weather</h2>
+      <p id="weather-info">Loading...</p>
+    </section>
+
+    <!-- Forecast Section -->
+    <section id="forecast">
+      <h3>3-Day Weather Forecast</h3>
+      <div id="forecast-container"></div>
+    </section>
+
+    <!-- Current Events -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <article>
+        <h3>Business Networking Night</h3>
+        <p>Join us for a night of networking with local businesses.</p>
+        <p><strong>Date:</strong> April 15, 2025</p>
+        <p><strong>Location:</strong> Chamber Hall, Edjeba-Warri</p>
+      </article>
+      <article>
+        <h3>Small Business Workshop</h3>
+        <p>Learn best practices for growing your business.</p>
+        <p><strong>Date:</strong> April 22, 2025</p>
+        <p><strong>Location:</strong> Online Webinar</p>
+      </article>
+    </section>
+
+    <!-- Spotlight Section -->
+    <section id="spotlights">
+      <h2>Business Spotlights</h2>
+      <div id="spotlight-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contact-box">
+      <p>Contact Us</p>
+      <address>
+        <p>📞 (+234-813-767-6508)</p>
+        <p>📍14 Idama Estate, Edjeba, Warri, Delta State</p>
+      </address>
+    </div>
+    
+    <div class="footer-socials">
+      <ul>
+        <li>
+    <a href="https://www.instagram.com/suoephraim" target="_blank">
+        <img src="images/instagram.png" alt="Instagram" width="40" height="40">
+    </a>
+</li>
+<li>
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="images/facebook.png" alt="Facebook" width="40" height="40">
+    </a>
+</li>
+      </ul>
+    </div>
+
+    <div class="copyright-box">
+      <p>&copy; <span id="year"></span> | Ejiro Ijabor - WDD231 | Nigeria 🇳🇬</p>
+      <p>Last modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+
+</html>
