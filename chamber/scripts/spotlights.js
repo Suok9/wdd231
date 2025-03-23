@@ -55,3 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         navMenu.classList.toggle("active");
     });
 });
+
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
