@@ -150,7 +150,7 @@ height: 100%;
 background: rgba(0,0,0,0.5); 
 }
 
-/* Membership Cards Layout */
+
 .membership-container {
     display: grid;
     gap: 20px;
@@ -158,14 +158,14 @@ background: rgba(0,0,0,0.5);
     animation: fadeIn 1.5s ease-in;
 }
 
-/* Two-column layout for desktop */
+
 @media (min-width: 1024px) {
     .membership-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* One-column layout for mobile */
+
 @media (max-width: 1023px) {
     .membership-container {
         grid-template-columns: 1fr;
@@ -233,17 +233,17 @@ background: rgba(0,0,0,0.5);
 
 
 form label {
-    display: block;  /* Ensures each label takes up full width */
-    margin-bottom: 10px; /* Adds space below each label */
+    display: block;  
+    margin-bottom: 10px; 
 }
 
 form input,
 form select,
 form textarea {
-    display: block;  /* Makes inputs stack below labels */
-    width: 100%;  /* Ensures consistency */
-    padding: 8px; /* Adds spacing inside the input fields */
-    margin-bottom: 15px; /* Adds space below each input */
+    display: block; 
+    width: 100%;  
+    padding: 8px; 
+    margin-bottom: 15px; 
     box-sizing: border-box;
 }
 
