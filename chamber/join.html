@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ejiro Ijabor">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="styles/join.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <script src="scripts/join.js" defer ></script >
+  <title> Membership signup page for Ephraim Chamber of Commerce</title>
+</head>
+
+<body>
+    <header>
+    <img src="images/favicon.png" alt="Ephraim Chamber of Commerce Logo"  id="logo">
+</header>
+        <section>
+        <button id="menu-toggle">☰</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html"> Home </a></li>
+                
+                <li><a href="directory.html">Directory</a></li>
+                
+                <li><a href="join.html">Join Us</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        </section>
+    
+  <main>
+     <div class="hero-overlay">
+        <h1>Join Us Now</h1>
+        </div>
+    <section id="signup">
+  <form method="get" action="thankyou.html">
+    <label>First Name: <input type="text" name="first-name" required title="Enter your first name" autocomplete="given-name"></label>
+
+    <label>Last Name: <input type="text" name="last-name" required title="Enter your last name" autocomplete="family-name"></label>
+
+    <label>Organizational Title: <input type="text" name="organization-title" pattern="[A-Za-z-\s]{7,}" title="Enter at least 7 alphabetic characters, hyphens, or spaces" autocomplete="organization-title"></label>
+
+    <label>Email: <input type="email" name="email" required title="Enter a valid email" autocomplete="email" placeholder="example@email.com"></label>
+
+    <label>Mobile Phone: <input type="tel" name="phone" required title="Enter your mobile number"
+    autocomplete="tel"></label>
+
+    <label>Business Name: <input type="text" name="organization" required title="Enter your business name" autocomplete="organization"></label>
+
+    <!-- Membership Level Selection -->
+    <label>Membership Level:
+        <select name="membership-level">
+            <option value="np">NP Membership (Free)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+        </select>
+    </label>
+
+    <label>Business Description: <textarea name="business-description" title="Describe your business"></textarea></label>
+
+    <!-- Hidden Timestamp -->
+    <input type="hidden" id="timestamp" name="timestamp" value="">
+
+    <button type="submit">Apply for Membership</button>
+</form>
+</section>
+
+<div class="membership-container">
+    <div class="membership-card" onclick="openModal('modal-np')">
+        <h3>NP Membership</h3>
+        <p>No fee for non-profits.</p>
+        <button>More Info</button>
+    </div>
+    <div class="membership-card" onclick="openModal('modal-bronze')">
+        <h3>Bronze Membership</h3>
+        <p>Basic membership benefits.</p>
+        <button>More Info</button>
+    </div>
+    <div class="membership-card" onclick="openModal('modal-silver')">
+        <h3>Silver Membership</h3>
+        <p>Includes advertising perks.</p>
+        <button>More Info</button>
+    </div>
+    <div class="membership-card" onclick="openModal('modal-gold')">
+        <h3>Gold Membership</h3>
+        <p>Full access to all benefits.</p>
+        <button>More Info</button>
+    </div>
+</div>
+
+<!-- Modals -->
+<div id="modal-np" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-np')">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <p>Access to networking events, training, and basic advertising.</p>
+    </div>
+</div>
+
+<div id="modal-bronze" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
+        <h2>Bronze Membership Benefits</h2>
+        <p>Basic benefits plus priority event invitations.</p>
+    </div>
+</div>
+
+<div id="modal-silver" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-silver')">&times;</span>
+        <h2>Silver Membership Benefits</h2>
+        <p>Advertising space, training, and networking opportunities.</p>
+    </div>
+</div>
+
+<div id="modal-gold" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-gold')">&times;</span>
+        <h2>Gold Membership Benefits</h2>
+        <p>All benefits, premium event access, and top-tier advertising.</p>
+    </div>
+</div>
+</main>
+  <footer>
+    <div class="contact-box">
+      <p>Contact Us</p>
+      <address>
+        <p>📞 (+234-813-767-6508)</p>
+     
+      </address>
+    </div>
+    
+    <div class="footer-socials">
+      <ul>
+        <li>
+    <a href="https://www.instagram.com/suoephraim" target="_blank">
+        <img src="images/instagram.png" alt="Instagram" width="40" height="40">
+    </a>
+</li>
+<li>
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="images/facebook.png" alt="Facebook" width="40" height="40">
+    </a>
+</li>
+      </ul>
+    </div>
+
+    <div class="copyright-box">
+      <p>&copy; <span id="year"></span> | Ejiro Ijabor - WDD231 | Nigeria 🇳🇬</p>
+      <p>Last modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+
+</html>
