@@ -44,12 +44,17 @@
         <h1>Join Us</h1>
  
     <section id="signup">
-  <form method="get" action="thankyou.html">
+ <form id="signup-form" method="get" action="thankyou.html" onsubmit="saveData(event)">
+
     <label>First Name: <input type="text" name="first-name" required title="Enter your first name" autocomplete="given-name"></label>
 
     <label>Last Name: <input type="text" name="last-name" required title="Enter your last name" autocomplete="family-name"></label>
 
-    <label>Organizational Title: <input type="text" name="organization-title" pattern="[A-Za-z-\s]{7,}" title="Enter at least 7 alphabetic characters, hyphens, or spaces" autocomplete="organization-title"></label>
+ <label>Organizational Title: 
+    <input type="text" name="organization-title" pattern="[A-Za-z\s-]{7,}" 
+        title="Enter at least 7 alphabetic characters, hyphens, or spaces" 
+        autocomplete="organization-title" required>
+</label>
 
     <label>Email: <input type="email" name="email" required title="Enter a valid email" autocomplete="email" placeholder="example@email.com"></label>
 
@@ -103,7 +108,7 @@
 
 <div id="modal-np" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-np')">&times;</span>
+        <span class="close" onclick="closeModal('modal-np')">❌</span>
         <h2>NP Membership Benefits</h2>
         <p>Access to networking events, training, and basic advertising.</p>
     </div>
@@ -111,7 +116,7 @@
 
 <div id="modal-bronze" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
+        <span class="close" onclick="closeModal('modal-bronze')">❌</span>
         <h2>Bronze Membership Benefits</h2>
         <p>Basic benefits plus priority event invitations.</p>
     </div>
@@ -119,7 +124,7 @@
 
 <div id="modal-silver" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-silver')">&times;</span>
+        <span class="close" onclick="closeModal('modal-silver')">❌</span>
         <h2>Silver Membership Benefits</h2>
         <p>Advertising space, training, and networking opportunities.</p>
     </div>
@@ -127,7 +132,7 @@
 
 <div id="modal-gold" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-gold')">&times;</span>
+        <span class="close" onclick="closeModal('modal-gold')">❌</span>
         <h2>Gold Membership Benefits</h2>
         <p>All benefits, premium event access, and top-tier advertising.</p>
     </div>
