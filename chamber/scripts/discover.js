@@ -22,7 +22,7 @@ fetch("data/discover.json")
     });
   });
 
-// Visitor message using localStorage
+
 const msgContainer = document.getElementById("visitor-message");
 const lastVisit = localStorage.getItem("lastVisit");
 const now = Date.now();
@@ -43,7 +43,7 @@ if (!lastVisit) {
 
 localStorage.setItem("lastVisit", now);
 
-// Footer dynamic year and last modified
+
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
