@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-/* Base Styles */
+
 body {
   font-family: "Abril Fatface", serif;
   margin: 0;
@@ -114,7 +114,7 @@ nav ul li a {
   border: 2px solid white;
 }
 
-/* Footer */
+
 footer {
   background: #3498DB;
   color: white;
@@ -124,7 +124,7 @@ footer {
 
 
 
-/* Buttons */
+
 button,
 .card button {
   margin: 5px;
@@ -141,7 +141,7 @@ button:hover,
   background-color: #0056b3;
 }
 
-/* Card Grid */
+
 .grid {
   display: grid;
   gap: 1rem;
@@ -178,7 +178,7 @@ button:hover,
   }
 }
 
-/* Card Area Assignment */
+
 .card:nth-child(1) { grid-area: card1; }
 .card:nth-child(2) { grid-area: card2; }
 .card:nth-child(3) { grid-area: card3; }
@@ -188,7 +188,7 @@ button:hover,
 .card:nth-child(7) { grid-area: card7; }
 .card:nth-child(8) { grid-area: card8; }
 
-/* Card Styles */
+
 .card {
   background-color: rgba(248, 248, 248, 0.9);
   border-radius: 8px;
@@ -217,7 +217,7 @@ button:hover,
   color: #444;
 }
 
-/* Hover */
+
 .card img:hover {
   transform: scale(1.05);
 }
