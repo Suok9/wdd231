@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* Base Styles */
+body {
+  font-family: "Abril Fatface", serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url("../images/commerce.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+main {
+  padding: 1rem;
+}
+
+header {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+h1 {
+  color: beige;
+  margin-top: 100px;
+  
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+}
+
+nav ul li {
+  display: block;
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 10;
+}
+
+#nav-menu {
+  display: none;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#nav-menu.active {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  #nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+#logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid white;
+}
+
+/* Footer */
+footer {
+  background: #3498DB;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+
+/* Buttons */
+button,
+.card button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover,
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Card Grid */
+.grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+}
+
+/* Card Area Assignment */
+.card:nth-child(1) { grid-area: card1; }
+.card:nth-child(2) { grid-area: card2; }
+.card:nth-child(3) { grid-area: card3; }
+.card:nth-child(4) { grid-area: card4; }
+.card:nth-child(5) { grid-area: card5; }
+.card:nth-child(6) { grid-area: card6; }
+.card:nth-child(7) { grid-area: card7; }
+.card:nth-child(8) { grid-area: card8; }
+
+/* Card Styles */
+.card {
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card h2 {
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+.card address,
+.card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Hover */
+.card img:hover {
+  transform: scale(1.05);
+}
+
+@media (hover: none), (max-width: 640px) {
+  .card img:hover {
+    transform: none;
+  }
+}
+
+
+
+#socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem 0;
+}
+
+#socials ul {
+  list-style: column;
+  display: flex;
+  gap: 15px;
+  padding: 1px;
+  margin: 2px;
+}
+
+#socials ul li a {
+  
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff22;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  
+}
+
+#socials ul li a:hover {
+  background-color: #ffffff44;
+  transform: scale(1.1);
+}
