@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Effurun Roundabout",
+    "address": "Effurun, Warri, Delta State",
+    "description": "A major landmark in Warri, known for its bustling traffic and connection to key parts of the city.",
+    "image": "images/effurun-roundabout.webp"
+  },
+  {
+    "name": "Delta Mall (Shoprite)",
+    "address": "Warri/Sapele Road, Effurun, Delta State",
+    "description": "A popular shopping destination offering retail stores, restaurants, and a cinema.",
+    "image": "images/delta-mall.webp"
+  },
+  {
+    "name": "Warri Township Stadium",
+    "address": "Ubeji Road, Warri, Delta State",
+    "description": "A stadium hosting local football matches and events, with a capacity of over 20,000 spectators.",
+    "image": "images/stadium.webp"
+  },
+  {
+    "name": "Red Mangrove Swamp",
+    "address": "Near Warri River, Warri, Delta State",
+    "description": "A unique ecological site showcasing mangrove trees and native wildlife near the Warri River.",
+    "image": "images/mangrove.webp"
+  },
+  {
+    "name": "Nanna Living History Museum",
+    "address": "Nanna Street, Koko, near Warri, Delta State",
+    "description": "A museum dedicated to Chief Nanna of the Itsekiri people, featuring historical artifacts and colonial-era relics.",
+    "image": "images/museum.webp"
+  },
+  {
+    "name": "Okere Market",
+    "address": "Okere Road, Warri, Delta State",
+    "description": "A traditional market bustling with vendors selling fresh produce, fabrics, and local goods.",
+    "image": "images/okere-market.webp"
+  },
+  {
+    "name": "Warri River",
+    "address": "Runs through central Warri, Delta State",
+    "description": "The Warri River is a major navigable channel in the Niger Delta of southern Nigeria, originating around Utagba Uno and flowing southwest towards the Atlantic Ocean. ",
+    "image": "images/warri-river.webp"
+  },
+  {
+    "name": "Enerhen Junction",
+    "address": "Enerhen Road, Warri, Delta State",
+    "description": "A central intersection in Warri, known for its vibrant street life and as a hub for local commuters.",
+    "image": "images/junction.webp"
+  }
+]
