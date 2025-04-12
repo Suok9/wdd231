@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script src="scripts/search.js" defer></script>
+  <link rel="stylesheet" href="styles/search.css">
+  <title>Movie Search</title>
+ 
+</head>
+<body>
+  <div class="header">
+    <img src="images/logo.jpeg" alt="ezravids int." id="logo" loading="lazy">
+    <h1>Search for Movies</h1>
+    
+     <section>
+      <button id="menu-toggle" aria-label="Toggle Menu">🟰</button>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Movies</a></li>
+          <li><a href="series.html">Series</a></li>
+        </ul>
+      </nav>
+    </section>
+    </div>
+  <div class="container">
+  
+
+    <!-- Search bar -->
+    <input type="text" id="movie-search" placeholder="Enter movie name...">
+    <button onclick="searchMovies()">Search</button>
+
+    <!-- Display search results -->
+    <div id="movie-results" class="movie-results"></div>
+  </div>
+    
+
+</body>
+</html>

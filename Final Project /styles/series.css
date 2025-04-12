@@ -1,0 +1,163 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #141414;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #141414;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  top: 30px;
+  left: 30px;
+  width: 80%;
+  padding: 120px 20px 20px; /* Increased top padding to make space for fixed header */
+  max-width: 1200px;
+  justify-content: center;
+}
+h1 {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin-botto: 20px;
+}
+
+/* Search bar styling */
+#movie-search {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #333;
+  color: white;
+  outline: none;
+}
+
+#movie-search:focus {
+  background-color: #555;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #f1c40f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e67e22;
+}
+
+/* Results container */
+.movie-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual movie styling */
+.movie {
+  background-color: #1c1c1c;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Movie poster image */
+.movie img {
+  width: 100%;
+  height: 375px;
+  object-fit: cover;
+}
+
+/* Title styling */
+.movie h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0;
+}
+
+/* Description and release date */
+.movie p {
+  font-size: 14px;
+  color: #bbb;
+  margin: 10px 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+#logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid white;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #FF3737;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#menu-toggle {
+  display: none;
+}

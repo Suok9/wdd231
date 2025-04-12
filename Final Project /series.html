@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search for TV Series</title>
+  <link rel="stylesheet" href="styles/series.css">  
+  <script src="scripts/series.js" defer></script>
+</head>
+<body>
+  
+  
+  <div class="header">
+    <!-- Logo -->
+    <img src="images/logo.jpeg" alt="ezravids int." id="logo" loading="lazy">
+    
+    <h1>Search for TV Series</h1>
+     <section>
+   <button id="menu-toggle" aria-label="Toggle Menu">🟰</button>
+   <nav>
+     <ul id="nav-menu">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="search.html">Movies</a></li>
+     </ul>
+   </nav>
+ </section>
+  </div>
+
+  <div class="container">
+    <!-- Search bar for TV Series -->
+    <input type="text" id="series-search" placeholder="Enter series name...">
+    <button onclick="searchSeries()">Search</button>
+
+    <!-- Display search results -->
+    <div id="series-results" class="movie-results"></div>
+  </div>
+
+
+</body>
+</html>
+
+
+    <div id="movie-results" class="movie-results"></div>
+  </div>

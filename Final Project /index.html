@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Discover movies and series based on your preferences">
+  <meta property="og:title" content="Movie & Series Recommender">
+  <meta property="og:description" content="Personalized suggestions and recommendations for movies and TV shows you'll love bases on genre and popularity">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="favicon.png">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/script.js" defer></script>
+  <title>Movie & Series Recommender</title>
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpeg" alt="ezravids int." id="logo" loading="lazy">
+    <h1>EzraVids</h1>
+    <section>
+      <button id="menu-toggle" aria-label="Toggle Menu">🟰</button>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Movies</a></li>
+          <li><a href="series.html">Series</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>Choose your favorite genres, rating, and more to get personalized suggestions.</p>
+      <form id="pref-form">
+        <label for="genres">Select Genre:</label>
+        <select id="genres" multiple>
+        
+        </select>
+        <label for="min-rating">Minimum Rating:</label>
+        <input type="number" id="min-rating" min="0" max="10" step="0.1" value="7" />
+        <label for="type">Type:</label>
+        <select id="type">
+          <option value="movie">Movie&Series</option>
+          <option value="#">none</option>
+        </select>
+        <button type="submit">Get Recommendations</button>
+      </form>
+    </section>
+
+    <section id="results" class="results"></section>
+  </main>
+
+  <footer>
+    <div class="contact-box">
+      <p>Contact Us</p>
+      <address>
+        <p>📞 (+234-813-767-6508)</p>
+      </address>
+    </div>
+
+    <div class="footer-socials">
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/suoephraim" target="_blank">
+            <img src="images/instagram.png" alt="Instagram" width="40" height="40">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="images/facebook.png" alt="Facebook" width="40" height="40">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="copyright-box">
+      <p>&copy; <span id="year"></span> | Ejiro Ijabor - WDD231 | Nigeria 🇳🇬</p>
+      <p>Last modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>
