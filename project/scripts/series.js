@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuToggle.textContent = navMenu.classList.contains("active") ? "✖" : "☰";
   });
 
-  // Update year in footer
+  
   const yearElement = document.getElementById('year');
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
@@ -22,8 +22,8 @@ function searchSeries() {
   const seriesSearchTerm = document.getElementById('series-search').value.trim();
 
   if (seriesSearchTerm) {
-    saveSearchHistory(seriesSearchTerm); // Save the search term
-    renderSearchHistory(); // Update the displayed history
+    saveSearchHistory(seriesSearchTerm); 
+    renderSearchHistory(); 
 
     fetch(`https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${encodeURIComponent(seriesSearchTerm)}&page=1`)
       .then(response => response.json())
@@ -50,7 +50,8 @@ function displaySeriesResults(seriesData) {
       const posterImg = document.createElement('img');
       posterImg.src = series.poster_path ?
         `https://image.tmdb.org/t/p/w500${series.poster_path}` :
-        'placeholder.jpg'; // Ensure you have a placeholder image
+        'placeholder.jpg'; 
+        
       posterImg.alt = `${series.name} Poster`;
 
       const title = document.createElement('h3');
@@ -85,12 +86,12 @@ function getYearAndLastModified() {
   };
 }
 
-// Example usage:
+
 const info = getYearAndLastModified();
 console.log("Current Year:", info.currentYear);
 console.log("Last Modified:", info.lastModified);
 
-// To display this information in your HTML:
+
 document.addEventListener('DOMContentLoaded', function() {
   const yearElement = document.getElementById('year');
 
@@ -104,7 +105,7 @@ function saveSearchHistory(query) {
   if (!history.includes(query)) {
     history.unshift(query);
     if (history.length > 10) {
-      history.pop(); // Remove the oldest search if the history exceeds 10 items
+      history.pop(); 
     }
     localStorage.setItem('seriesSearchHistory', JSON.stringify(history));
   }
@@ -112,7 +113,8 @@ function saveSearchHistory(query) {
 
 function renderSearchHistory() {
   const container = document.getElementById('search-history');
-  if (!container) return; // Exit if the container doesn't exist in the HTML
+  if (!container) return; 
+  
   container.innerHTML = '';
 
   const history = JSON.parse(localStorage.getItem('seriesSearchHistory')) || [];
@@ -123,7 +125,8 @@ function renderSearchHistory() {
 
     history.forEach(item => {
       const tag = document.createElement('span');
-      tag.classList.add('search-history-item'); // You might want to add CSS for styling
+      tag.classList.add('search-history-item'); 
+      
       tag.textContent = item;
       tag.addEventListener('click', () => {
         document.getElementById('series-search').value = item;

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const yearSpan = document.getElementById("year");
     const lastModifiedSpan = document.getElementById("lastModified");
     const resultsContainer = document.getElementById('searchResults');
-    const API_KEY = '262790dcf12cf40b2e9b7125fcefd041'; // Make sure this is your actual API key
+    const API_KEY = '262790dcf12cf40b2e9b7125fcefd041';
 
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
     if (lastModifiedSpan) lastModifiedSpan.textContent = document.lastModified;

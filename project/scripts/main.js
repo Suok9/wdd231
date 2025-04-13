@@ -18,7 +18,7 @@
   });
 
   
-  // Populate genre dropdown dynamically
+  
   const genreList = [
    { id: 28, name: "Action" },
    { id: 12, name: "Adventure" },
@@ -49,7 +49,7 @@
    genreSelect.appendChild(option);
   });
   
-  // Restore previous user preferences if any
+  
   const savedPrefs = JSON.parse(localStorage.getItem('userPreferences'));
   if (savedPrefs) {
    savedPrefs.genres.forEach(savedId => {
@@ -60,19 +60,19 @@
    document.getElementById('type').value = savedPrefs.type;
   }
   
-  // Modal on page load
+  
   const sampleContent = document.createElement('div');
   sampleContent.innerHTML = '<p>Welcome to EZRAVIDS! Explore personalized movie & series suggestions.</p>';
   openModal(sampleContent);
  });
 
- // TMDb API key (replace with your actual key)
+ 
  const API_KEY = '262790dcf12cf40b2e9b7125fcefd041';
 
  const form = document.getElementById('pref-form');
  const resultsSection = document.getElementById('results');
 
- // Form submission
+
  form.addEventListener('submit', (event) => {
   event.preventDefault();
   
@@ -83,14 +83,14 @@
   const userPreferences = { genres, minRating, type };
   localStorage.setItem('userPreferences', JSON.stringify(userPreferences));
   
-  // Construct the URL with query parameters
+
   let url = `results.html?genres=${genres.map(encodeURIComponent).join(',')}&minRating=${encodeURIComponent(minRating)}&type=${encodeURIComponent(type)}`;
   
-  // Redirect to the new page
+  
   window.location.href = url;
  });
 
- // Get recommendations from TMDb - THIS FUNCTION IS NO LONGER USED IN THIS CODE
+ 
  async function getRecommendations(genres, minRating, type) {
   try {
    const genreString = genres.join(',');
@@ -109,7 +109,7 @@
   }
  }
 
- // Display recommendations - THIS FUNCTION IS NO LONGER USED IN THIS CODE
+ 
  function displayRecommendations(data) {
   resultsSection.innerHTML = '';
   
@@ -143,7 +143,7 @@
   });
  }
 
- // Modal structure
+ 
  function openModal(content) {
   const modal = document.createElement('div');
   modal.classList.add('modal');
