@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
     if (lastModifiedSpan) lastModifiedSpan.textContent = document.lastModified;
 
-    // Function to get query parameters from the URL
     function getQueryParam(name) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const genres = genresParam.split(',');
         const minRating = parseFloat(minRatingParam);
         const type = typeParam;
-
         fetchRecommendations(genres, minRating, type);
     } else {
         resultsContainer.textContent = 'No search criteria provided.';
@@ -31,10 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             const genreString = genres.join(',');
             const url = `https://api.themoviedb.org/3/discover/${type}?api_key=${API_KEY}&with_genres=${genreString}&vote_average.gte=${minRating}&sort_by=popularity.desc&page=1`;
-
             const response = await fetch(url);
             const data = await response.json();
-
             if (data.results && data.results.length > 0) {
                 displayResults(data.results);
             } else {
@@ -47,25 +43,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function displayResults(data) {
-        resultsContainer.innerHTML = ''; // Clear previous results
-
+        resultsContainer.innerHTML = '';
         data.forEach(item => {
             const itemDiv = document.createElement('div');
-            itemDiv.classList.add('recommendation-item'); // You might want to add CSS for styling
-            itemDiv.dataset.itemId = item.id; // Store the item ID for fetching details
-            itemDiv.style.cursor = 'pointer'; // Indicate it's clickable
+            itemDiv.classList.add('recommendation-item');
+            itemDiv.dataset.itemId = item.id;
+            itemDiv.style.cursor = 'pointer';
             itemDiv.addEventListener('click', () => openModal(item.id, typeParam));
-
             const title = document.createElement('h3');
             title.textContent = item.title || item.name;
-
             const posterImg = document.createElement('img');
             posterImg.src = item.poster_path ? `https://image.tmdb.org/t/p/w300${item.poster_path}` : 'placeholder.jpg';
             posterImg.alt = `${item.title || item.name} Poster`;
-
             itemDiv.appendChild(posterImg);
             itemDiv.appendChild(title);
-
             resultsContainer.appendChild(itemDiv);
         });
     }
@@ -89,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (details) {
                     const modal = document.getElementById('itemModal');
                     const modalContent = document.getElementById('modalContent');
-
                     modalContent.innerHTML = `
                         <h3>${details.title || details.name}</h3>
                         ${details.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${details.poster_path}" alt="${details.title || details.name} Poster">` : '<p>No poster available.</p>'}
@@ -112,35 +102,38 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'none';
     }
 
-    // Create the modal structure in JavaScript if it doesn't exist in your HTML
     if (!document.getElementById('itemModal')) {
         const modal = document.createElement('div');
         modal.id = 'itemModal';
         modal.classList.add('modal');
         modal.innerHTML = `
             <div class="modal-content">
-                <span class="close-button" onclick="closeModal()">&times;</span>
+                <span class="close-button">&times;</span>
                 <div id="modalContent">
                     </div>
             </div>
         `;
         document.body.appendChild(modal);
 
-        // Add CSS for the modal (you can put this in your existing CSS file)
+        const closeButton = modal.querySelector('.close-button');
+        if (closeButton) {
+            closeButton.addEventListener('click', closeModal);
+        }
+
         const style = document.createElement('style');
         style.textContent = `
             .modal {
             font-family: "Georgia", serif;
                 display: none;
                 font-weight: bolder;
-                position: fixed; 
-                z-index: 1; 
+                position: fixed;
+                z-index: 1;
                 left: 0;
                 top: 0;
                 width: 100%;
-                height: 100%; 
-                overflow: auto; 
-                background-color: rgba(0,0,0,0.4); 
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0,0,0,0.4);
             }
 
             .modal-content {
@@ -148,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 margin: 15% auto; /* 15% from the top and centered */
                 padding: 20px;
                 border: 1px solid #888;
-                width: 80%; 
+                width: 80%;
                 border-radius: 5px;
                 font-weight: bolder;
                 position: relative;
@@ -159,13 +152,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 float: right;
                 font-size: 28px;
                 font-weight: bold;
+                cursor: pointer;
             }
 
             .close-button:hover,
             .close-button:focus {
                 color: black;
                 text-decoration: none;
-                cursor: pointer;
             }
 
             #modalContent img {
@@ -179,5 +172,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         `;
         document.head.appendChild(style);
+    } else {
+        const modal = document.getElementById('itemModal');
+        const closeButton = modal.querySelector('.close-button');
+        if (closeButton) {
+            closeButton.addEventListener('click', closeModal);
+        }
     }
 });
