@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover movies and series based on your preferences">
+  <meta property="og:title" content="Movie & Series Recommender">
+  <meta property="og:description" content="Search for series and TV shows you'll love bases on their names">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="favicon.png">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="author" content="Ejiro Ijabor">
   <title>Search for TV Series</title>
   <link rel="stylesheet" href="styles/series.css">  
   <script src="scripts/series.js" defer></script>
@@ -16,7 +23,7 @@
     
     <h1>Search for TV Series</h1>
      <section>
-   <button id="menu-toggle" aria-label="Toggle Menu">🟰</button>
+  <button id="menu-toggle" aria-label="Toggle Menu">🟰</button>
    <nav>
      <ul id="nav-menu">
        <li><a href="index.html">Home</a></li>
@@ -27,18 +34,34 @@
   </div>
 
   <div class="container">
-    <!-- Search bar for TV Series -->
-    <input type="text" id="series-search" placeholder="Enter series name...">
+    
+ <input type="text" id="series-search" placeholder="Search TV Series...">
     <button onclick="searchSeries()">Search</button>
+<div id="search-history" class="search-history">
+  </div>
 
-    <!-- Display search results -->
+    
     <div id="series-results" class="movie-results"></div>
   </div>
 
-
+<footer>
+    <p>&copy; <span id="year"></span> EZRAVIDS</p>
+    <div class="footer-socials">
+     <ul>
+       <li>
+         <a href="https://www.instagram.com/suoephraim" target="_blank">
+           <img src="images/instagram.png" alt="Instagram" width="40" height="40">
+         </a>
+       </li>
+       <li>
+         <a href="https://www.facebook.com" target="_blank">
+           <img src="images/facebook.png" alt="Facebook" width="40" height="40">
+         </a>
+       </li>
+     </ul>
+   </div>
+</footer>
 </body>
 </html>
 
 
-    <div id="movie-results" class="movie-results"></div>
-  </div>

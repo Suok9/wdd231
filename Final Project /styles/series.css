@@ -1,7 +1,7 @@
 /* General body styling */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #141414;
+  font-family: 'Edu AU VIC WA NT Arrows', sans-serif;
+  background-color: cadetblue;
   color: white;
   margin: 0;
   padding: 0;
@@ -17,28 +17,27 @@ body {
   left: 0;
   width: 100%;
   padding: 20px;
-  background-color: #141414;
+  font-family: "Arial Black", sans-serif;
+  background-color: darkblue;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 10px blue
 }
 
 .container {
-  top: 30px;
-  left: 30px;
-  width: 80%;
-  padding: 120px 20px 20px; /* Increased top padding to make space for fixed header */
-  max-width: 1200px;
-  justify-content: center;
+   width: 80%;
+padding: 20px;
+max-width: 1200px;
+  
 }
 h1 {
   font-size: 36px;
   color: #fff;
   text-align: center;
-  margin-botto: 20px;
+  margin-bottom: 20px; 
 }
 
 /* Search bar styling */
@@ -78,11 +77,13 @@ button:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  font-weight: bolder;
 }
 
 /* Individual movie styling */
 .movie {
-  background-color: #1c1c1c;
+  font-family: "Georgia", serif;
+  background-color: beige;
   width: 250px;
   text-align: center;
   border-radius: 10px;
@@ -107,14 +108,14 @@ button:hover {
 .movie h3 {
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: darkred;
   margin: 10px 0;
 }
 
 /* Description and release date */
 .movie p {
   font-size: 14px;
-  color: #bbb;
+  color: black;
   margin: 10px 0;
 }
 
@@ -139,6 +140,32 @@ button:hover {
   left: 10px;
   border: 2px solid white;
 }
+#nav-menu {
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#nav-menu.active {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  #nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+}
 
 nav {
   margin-top: 10px;
@@ -160,4 +187,61 @@ nav ul li a {
 
 #menu-toggle {
   display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: darkgrey;
+  padding: 1rem 0;
+
+  margin-top: 40px;
+  align-items: center;
+}
+
+.footer-socials ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.footer-socials img {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* In your styles/series.css file */
+
+/* Styling for the search history container */
+.search-history {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center; /* Center the title and items */
+}
+
+.search-history h4 {
+  color: #ddd; /* Light grey color for the title */
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* Styling for individual search history items (spans) */
+.search-history-item {
+  display: inline-block; /* Allows them to sit next to each other */
+  background-color: #555; /* Dark grey background */
+  color: white; /* White text */
+  padding: 8px 15px; /* Add some padding inside the items */
+  margin: 5px; /* Add some spacing between items */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Change cursor to indicate they are clickable */
+  font-size: 0.9em; /* Slightly smaller font size */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.search-history-item:hover {
+  background-color: #777; /* Slightly lighter grey on hover */
 }

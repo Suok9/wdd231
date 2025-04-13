@@ -1,7 +1,7 @@
-/* General body styling */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #141414;
+  font-family: 'Edu AU VIC WA NT Arrows', sans-serif;
+  background-color: cadetblue;
   color: white;
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@ h1 {
   font-size: 36px;
   color: #fff;
   text-align: center;
-  margin-botto: 20px;
+  margin-bottom: 20px;
 }
 
 /* Search bar styling */
@@ -61,11 +61,13 @@ button:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  font-weight: bolder;
 }
 
 /* Individual movie styling */
 .movie {
-  background-color: #1c1c1c;
+  font-family: "Georgia", serif;
+  background-color: beige;
   width: 250px;
   text-align: center;
   border-radius: 10px;
@@ -90,14 +92,14 @@ button:hover {
 .movie h3 {
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: darkred;
   margin: 10px 0;
 }
 
 /* Description and release date */
 .movie p {
   font-size: 14px;
-  color: #bbb;
+  color: black;
   margin: 10px 0;
 }
 
@@ -107,14 +109,11 @@ button:hover {
   gap: 5px;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-}
+
 
 #logo {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
@@ -125,6 +124,21 @@ button:hover {
 
 nav {
   margin-top: 10px;
+}
+
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  align-items : center;
+}
+
+#nav-menu.active {
+  display: flex;
 }
 
 nav ul {
@@ -142,8 +156,33 @@ nav ul li a {
 }
 
 #menu-toggle {
-  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  z-index: 10;
 }
+
+
+@media (min-width: 768px) {
+  #nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+}
+
+
 
 .header {
   position: fixed;
@@ -151,11 +190,96 @@ nav ul li a {
   left: 0;
   width: 100%;
   padding: 20px;
-  background-color: #141414;
+  font-family: "Arial Black", sans-serif;
+  background-color: darkblue;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 10px blue
+}
+
+
+  footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: darkgrey;
+  padding: 1rem 0;
+
+  margin-top: 40px;
+  align-items: center;
+}
+
+.footer-socials ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.footer-socials img {
+  width: 50px;
+  height: 40px;
+}
+
+.search-history {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-history span {
+  background-color: #444;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-history span:hover {
+  background-color: #666;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #222;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: white;
 }

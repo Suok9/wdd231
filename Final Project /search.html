@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find movies using keywords on the search bar via The movie database" />
+  <meta name="author" content="Ejiro Ijabor" />
   <script src="scripts/search.js" defer></script>
-  <link rel="stylesheet" href="styles/search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/search.css" />
   <title>Movie Search</title>
- 
 </head>
 <body>
   <div class="header">
-    <img src="images/logo.jpeg" alt="ezravids int." id="logo" loading="lazy">
-    <h1>Search for Movies</h1>
-    
-     <section>
-      <button id="menu-toggle" aria-label="Toggle Menu">🟰</button>
+    <img src="images/logo.jpeg" alt="ezravids int." id="logo" loading="lazy" />
+    <h1>Movies Search</h1>
+    <section>
+      <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
       <nav>
         <ul id="nav-menu">
           <li><a href="index.html">Home</a></li>
@@ -23,18 +26,34 @@
         </ul>
       </nav>
     </section>
-    </div>
-  <div class="container">
-  
+  </div>
 
-    <!-- Search bar -->
-    <input type="text" id="movie-search" placeholder="Enter movie name...">
+  <div class="container">
+    <input type="text" id="movie-search" placeholder="Enter movie name..." />
     <button onclick="searchMovies()">Search</button>
 
-    <!-- Display search results -->
+    
+    <div id="search-history" class="search-history"></div>
+
+    
     <div id="movie-results" class="movie-results"></div>
   </div>
-    
 
+  
+  <div id="movie-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <div id="modal-details"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-socials">
+      <ul>
+        <li><a href="https://www.instagram.com/suoephraim" target="_blank"><img src="images/instagram.png" alt="Instagram" width="40" height="40" /></a></li>
+        <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" width="40" height="40" /></a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
