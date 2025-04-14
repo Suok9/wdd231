@@ -107,7 +107,7 @@ section h2 {
   gap: 20px;
 }
 
-/* Recommendation Cards */
+
 .recommendation-item {
   background-color: #fff;
   border-radius: 10px;
@@ -138,7 +138,7 @@ section h2 {
   color: #444;
 }
 
-/* Responsive Image Control */
+
 @media screen and (max-width: 768px) {
   .recommendation-item img {
     width: 100%;

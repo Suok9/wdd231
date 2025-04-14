@@ -24,7 +24,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Search bar styling */
+
 #movie-search {
   width: 100%;
   max-width: 600px;
@@ -55,7 +55,7 @@ button:hover {
   background-color: #e67e22;
 }
 
-/* Results container */
+/* Results */
 .movie-results {
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +64,7 @@ button:hover {
   font-weight: bolder;
 }
 
-/* Individual movie styling */
+/* Individual movie */
 .movie {
   font-family: "Georgia", serif;
   background-color: beige;
@@ -81,14 +81,14 @@ button:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Movie poster image */
+/* Movie posters */
 .movie img {
   width: 100%;
   height: 370px;
   object-fit: cover;
 }
 
-/* Title styling */
+/* Movie Titles  */
 .movie h3 {
   font-size: 18px;
   font-weight: bold;
@@ -245,7 +245,7 @@ nav ul li a {
   background-color: #666;
 }
 
-/* Modal styles */
+/* Modal stylers */
 .modal {
   display: none;
   position: fixed;
