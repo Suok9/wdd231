@@ -78,8 +78,9 @@ function showMovieDetails(movie) {
   const modal = document.getElementById('movie-modal');
   const details = document.getElementById('modal-details');
   details.innerHTML = `
-    <h2>${movie.title}</h2>
+    
     <img src="${movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'https://via.placeholder.com/300'}" style="width:100%; max-height:400px; object-fit:cover;">
+    <h2><a href="https://kimoitv.com/search/?q=${movie.title}">${movie.title}</a></h2>
     <p><strong>Release Date:</strong> ${movie.release_date}</p>
     <p><strong>Overview:</strong> ${movie.overview || 'No description available.'}</p>
     <p><strong>Rating:</strong> ${movie.vote_average}/10</p>
