@@ -1,4 +1,4 @@
-/* General body styling */
+
 body {
   font-family: 'Edu AU VIC WA NT Arrows', sans-serif;
   background-color: cadetblue;
@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  
   font-family: "Arial Black", sans-serif;
   background-color: darkblue;
   z-index: 1000;
@@ -40,7 +40,7 @@ h1 {
   margin-bottom: 20px; 
 }
 
-/* Search bar styling */
+/* Search bar */
 #movie-search {
   width: 100%;
   max-width: 600px;
@@ -71,7 +71,7 @@ button:hover {
   background-color: #e67e22;
 }
 
-/* Results container */
+/* Results */
 .movie-results {
   display: flex;
   flex-wrap: wrap;
@@ -80,7 +80,7 @@ button:hover {
   font-weight: bolder;
 }
 
-/* Individual movie styling */
+/* Individual movie style */
 .movie {
   font-family: "Georgia", serif;
   background-color: beige;
@@ -97,14 +97,14 @@ button:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Movie poster image */
+/* Movie poster */
 .movie img {
   width: 100%;
   height: 375px;
   object-fit: cover;
 }
 
-/* Title styling */
+/* Title style */
 .movie h3 {
   font-size: 18px;
   font-weight: bold;
@@ -214,34 +214,66 @@ footer {
 }
 
 
-/* In your styles/series.css file */
-
-/* Styling for the search history container */
 .search-history {
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: center; /* Center the title and items */
+  text-align: center; 
 }
 
 .search-history h4 {
-  color: #ddd; /* Light grey color for the title */
+  color: #ddd; 
   margin-bottom: 10px;
   font-size: 1.1em;
 }
 
-/* Styling for individual search history items (spans) */
+
 .search-history-item {
-  display: inline-block; /* Allows them to sit next to each other */
-  background-color: #555; /* Dark grey background */
-  color: white; /* White text */
-  padding: 8px 15px; /* Add some padding inside the items */
-  margin: 5px; /* Add some spacing between items */
-  border-radius: 5px; /* Slightly rounded corners */
-  cursor: pointer; /* Change cursor to indicate they are clickable */
-  font-size: 0.9em; /* Slightly smaller font size */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  display: inline-block; 
+  background-color: #555;
+  color: white; 
+  padding: 8px 15px; 
+  margin: 5px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 0.9em; 
+  transition: background-color 0.3s ease; 
 }
 
 .search-history-item:hover {
-  background-color: #777; /* Slightly lighter grey on hover */
+  background-color: #777; 
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: beige;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  color: black;
+  border-radius: 10px;
+  position: relative;
+  font-family: "Georgia", serif;
+}
+
+.close-button {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
 }
