@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             .modal-content {
                 background-color: beige;
-                margin: 15% auto; /* 15% from the top and centered */
+                margin: 15% auto; 
                 padding: 20px;
                 border: 1px solid #888;
                 width: 80%;

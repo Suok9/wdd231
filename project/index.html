@@ -16,6 +16,7 @@
 </head>
 <body>
   <header>
+    
     <img src="images/logo.jpeg" alt="ezravids int." id="logo" loading="lazy">
     <h1>EzraVids</h1>
     <section>
@@ -31,8 +32,8 @@
   </header>
 
   <main>
-    <section class="intro">
-      <p>Choose your favorite genres, rating, and more to get personalized suggestions.</p>
+    <section id="intro">
+      <p>Select your preferences for each category of genres, rating, and more to get personalized suggestions.</p>
       <form id="pref-form">
         <label for="genres">Select Genre:</label>
         <select id="genres" multiple>
@@ -43,7 +44,7 @@
         <label for="type">Type:</label>
         <select id="type">
           <option value="movie">Movie&Series</option>
-          <option value="#">none</option>
+          <option value="none">none</option>
         </select>
         <button type="submit">Get Recommendations</button>
       </form>
@@ -51,7 +52,9 @@
 
     <section id="results" class="results"></section>
   </main>
-
+<section id="username">
+  <!--Tab to edit-->
+</section>
   <footer>
     <div class="contact-box">
       <p>Contact Us</p>

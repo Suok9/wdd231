@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-weight: bolder;
 }
 
 .container {
@@ -18,7 +19,7 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 33px;
   color: #fff;
   text-align: center;
   margin-bottom: 20px;
@@ -106,20 +107,20 @@ button:hover {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 3px;
 }
 
 
 
 #logo {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
   top: 10px;
-  left: 10px;
-  border: 2px solid white;
+  left: 5px;
+  border: 1px solid white;
 }
 
 nav {
@@ -131,10 +132,11 @@ nav {
   flex-direction: column;
   position: absolute;
   top: 60px;
-  right: 15px;
+  right: 38px;
   padding: 10px;
   border-radius: 5px;
   align-items : center;
+  
 }
 
 #nav-menu.active {
@@ -145,14 +147,14 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 nav ul li a {
   color: #FF3737;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 #menu-toggle {
@@ -163,8 +165,8 @@ nav ul li a {
   cursor: pointer;
   display: block;
   position: absolute;
-  right: 30px;
-  top: 15px;
+  right: 45px;
+  top: 19px;
   z-index: 10;
 }
 
@@ -192,7 +194,7 @@ nav ul li a {
   padding: 20px;
   font-family: "Arial Black", sans-serif;
   background-color: darkblue;
-  z-index: 1000;
+  z-index: 900;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,9 +210,11 @@ nav ul li a {
   width: 100%;
   background-color: darkgrey;
   padding: 1rem 0;
-
-  margin-top: 40px;
+  font-weight: bolder;
+  font-family:"Georgia", serif;
+  margin-top: 20px;
   align-items: center;
+   
 }
 
 .footer-socials ul {
@@ -273,7 +277,7 @@ nav ul li a {
 
 
 .close {
-  color: #aaa;
+  color: red;
   position: absolute;
   top: 15px;
   right: 20px;

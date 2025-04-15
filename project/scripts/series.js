@@ -1,6 +1,6 @@
 const API_KEY = '262790dcf12cf40b2e9b7125fcefd041';
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   renderSearchHistory();
   
   const menuToggle = document.getElementById("menu-toggle");
