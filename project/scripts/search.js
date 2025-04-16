@@ -24,6 +24,7 @@ async function searchMovies() {
 
         const poster = document.createElement('img');
         poster.src = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'https://via.placeholder.com/150';
+        poster.loading = `lazy`;
 
         const releaseDate = document.createElement('p');
         releaseDate.textContent = `Release Date: ${movie.release_date}`;
@@ -79,7 +80,7 @@ function showMovieDetails(movie) {
   const details = document.getElementById('modal-details');
   details.innerHTML = `
     
-    <img src="${movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'https://via.placeholder.com/300'}" style="width:100%; max-height:400px; object-fit:cover;">
+    <img src="${movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'https://via.placeholder.com/300'}" loading="lazy" style="width:100%; max-height:400px; object-fit:cover;">
     <h2><a href="https://kimoitv.com/search/?q=${movie.title}">${movie.title}</a></h2>
     <p><strong>Release Date:</strong> ${movie.release_date}</p>
     <p><strong>Overview:</strong> ${movie.overview || 'No description available.'}</p>

@@ -163,7 +163,7 @@ button:hover {
   }
 
   #menu-toggle {
-    display: none;
+    display: none !important;
   }
 }
 

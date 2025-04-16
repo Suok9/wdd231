@@ -53,6 +53,8 @@ function displaySeriesResults(seriesData) {
       
       posterImg.alt = `${series.name} Poster`;
       
+      posterImg.loading=`lazy`;
+      
       const title = document.createElement('h3');
       title.textContent = series.name;
       
@@ -83,7 +85,7 @@ function showSeriesDetails(series) {
   const details = document.getElementById('modal-details');
   
   details.innerHTML = `
-    <img src="${series.poster_path ? `https://image.tmdb.org/t/p/w500${series.poster_path}` : 'https://via.placeholder.com/300'}" style="width:100%; max-height:400px; object-fit:cover;">
+    <img src="${series.poster_path ? `https://image.tmdb.org/t/p/w500${series.poster_path}` : 'https://via.placeholder.com/300'}" style="width:100%; max-height:400px; object-fit:cover;" loading="lazy" >
     <h2><a href="https://kimoitv.com/search/?q=${encodeURIComponent(series.name)}" target="_blank">${series.name}</a></h2>
     <p><strong>First Air Date:</strong> ${series.first_air_date || 'Unknown'}</p>
     <p><strong>Overview:</strong> ${series.overview || 'No description available.'}</p>

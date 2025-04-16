@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title.textContent = item.title || item.name;
             const posterImg = document.createElement('img');
             posterImg.src = item.poster_path ? `https://image.tmdb.org/t/p/w300${item.poster_path}` : 'placeholder.jpg';
+            posterImg.loading =` lazy`;
             posterImg.alt = `${item.title || item.name} Poster`;
             itemDiv.appendChild(posterImg);
             itemDiv.appendChild(title);
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const modalContent = document.getElementById('modalContent');
                     modalContent.innerHTML = `
                         <h3>${details.title || details.name}</h3>
-                        ${details.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${details.poster_path}" alt="${details.title || details.name} Poster">` : '<p>No poster available.</p>'}
+                        ${details.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${details.poster_path}" alt="${details.title || details.name} Poster" loading="lazy" >` : '<p>No poster available.</p>'}
                         <p><strong>Overview:</strong> ${details.overview || 'No description available.'}</p>
                         <p><strong>Rating:</strong> ${details.vote_average}/10</p>
                         <p><strong>Release Date:</strong> ${details.release_date || details.first_air_date || 'N/A'}</p>
@@ -165,6 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 max-width: 100%;
                 height: auto;
                 margin-bottom: 10px;
+               
             }
 
             #modalContent h3 {
